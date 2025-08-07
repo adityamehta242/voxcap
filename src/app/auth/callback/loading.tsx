@@ -1,0 +1,12 @@
+import { Spinner } from '@/components/loader/spinner'
+import React from 'react'
+
+type Props = {}
+
+const AuthLoading = (props: Props) => {
+  return (
+    <div className='flex h-full items-center justify-center'>
+        <Spinner/>
+    </div>
+  )
+}
