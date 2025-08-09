@@ -15,9 +15,9 @@ export const onAuthenticateUser = async () => {
                 clerkid: user.id
             },
             include: {
-                workspace: {
+                workspaces: {
                     where: {
-                        User: {
+                        user: {
                             clerkid: user.id
                         },
                     },
@@ -33,8 +33,8 @@ export const onAuthenticateUser = async () => {
             data: {
                 clerkid: user.id,
                 email: user.emailAddresses[0].emailAddress,
-                firstName: user.firstName,
-                lastName: user.lastName,
+                firstname: user.firstName,
+                lastname: user.lastName,
                 image: user.imageUrl,
                 studio: {
                     create: {}
@@ -42,7 +42,7 @@ export const onAuthenticateUser = async () => {
                 subscription: {
                     create: {}
                 },
-                workspace: {
+                workspaces: {
                     create: {
                         name: `${user.firstName}'s Workspace`,
                         type: 'PERSONAL'
@@ -50,9 +50,9 @@ export const onAuthenticateUser = async () => {
                 }
             },
             include: {
-                workspace: {
+                workspaces: {
                     where: {
-                        User: {
+                        user: {
                             clerkid: user.id,
                         },
                     },

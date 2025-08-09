@@ -4,7 +4,7 @@ type Props = {
   color?: string;
 };
 
-export const Spinner = ({ color }: Props) => {
+const Spinner = ({ color }: Props) => {
   return (
     <div role="status">
       <svg
@@ -26,3 +26,5 @@ export const Spinner = ({ color }: Props) => {
     </div>
   );
 };
+
+export default Spinner;
