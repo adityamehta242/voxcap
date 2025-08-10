@@ -1,4 +1,4 @@
-import { Spinner } from '@/components/loader/spinner'
+import Spinner from '@/components/global/loader/spinner'
 import React from 'react'
 
 type Props = {}
@@ -10,3 +10,5 @@ const AuthLoading = (props: Props) => {
     </div>
   )
 }
+
+export default AuthLoading;
